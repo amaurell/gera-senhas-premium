@@ -15,8 +15,8 @@ O **Gera Senhas** é uma aplicação web de alta performance voltada para a gera
 ### 🎯 Funcionalidades
 - **Geração CSPRNG**: Utiliza `window.crypto` para aleatoriedade de nível militar.
 - **Customização Total**: Controle de comprimento (8-64 caracteres) e tipos de caracteres (Maiúsculas, Minúsculas, Números, Símbolos).
-- **Interface Premium**: Design Neo-Noir com glassmorphism e animações fluidas.
-- **Arte Algorítmica**: Fundo dinâmico com Flow Field em p5.js.
+- **Interface Hacker**: Design Matrix-Style com glassmorphism, tipografia terminal (JetBrains Mono) e brilho neon.
+- **Arte Algorítmica**: Fundo dinâmico com Matrix Rain (Chuva de Código) em p5.js.
 - **Privacidade Total**: Processamento 100% local, sem persistência ou transmissão de dados.
 
 ### 🏗️ Arquitetura Técnica (POO & SOLID)
@@ -61,8 +61,8 @@ Devido ao uso de recursos modernos de hardware (Web Crypto API) e scripts extern
 ### 🎯 Features
 - **CSPRNG Generation**: Uses `window.crypto` for military-grade randomness.
 - **Total Customization**: Control over length (8-64 characters) and character types.
-- **Premium Interface**: Neo-Noir design with glassmorphism and fluid animations.
-- **Algorithmic Art**: Dynamic p5.js background featuring a Flow Field.
+- **Hacker Interface**: Matrix-Style design with glassmorphism, terminal typography (JetBrains Mono), and neon glow.
+- **Algorithmic Art**: Dynamic p5.js background featuring Matrix Rain (Code Rain).
 - **Zero-Trust Privacy**: 100% local processing; no data is stored or transmitted.
 
 ### 🏗️ Technical Architecture
