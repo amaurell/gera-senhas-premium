@@ -15,6 +15,7 @@
     <meta property="og:title" content="Gera Senhas - Segurança Extrema">
     <meta property="og:description" content="Crie senhas impossíveis de quebrar com nosso gerador de alta performance.">
     <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0f172a">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,52 +130,52 @@
     <div id="p5-canvas-container" class="fixed inset-0 pointer-events-none z-0 opacity-40"></div>
 
     <!-- Header Section | @seo-expert-amb -->
-    <header class="relative z-10 pt-12 pb-8 text-center px-4 animate-fade-in">
-        <h1 class="text-4xl md:text-6xl font-display font-bold mb-4 tracking-tight">
+    <header class="relative z-10 pt-10 pb-6 text-center px-4 animate-fade-in">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-display font-bold mb-3 tracking-tight">
             <span class="gradient-text">Gerador de Senhas</span>
         </h1>
-        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light">
+        <p class="text-slate-400 text-base md:text-xl max-w-2xl mx-auto font-light px-2">
             Segurança de nível militar. Configure e gere senhas ultra seguras.
         </p>
     </header>
 
     <!-- Main Content | @poo-amb -->
-    <main class="relative z-10 flex-grow flex items-center justify-center p-4">
-        <section class="glass rounded-3xl p-8 md:p-12 w-full max-w-2xl shadow-2xl transition-all duration-300 hover:border-primary/30" aria-labelledby="generator-title">
+    <main class="relative z-10 flex-grow flex items-start md:items-center justify-center p-4">
+        <section class="glass rounded-3xl p-6 md:p-12 w-full max-w-2xl shadow-2xl transition-all duration-300 hover:border-primary/30" aria-labelledby="generator-title">
             <h2 id="generator-title" class="sr-only">Configurações do Gerador</h2>
             
             <!-- Result Display -->
-            <div class="relative mb-10 group">
+            <div class="relative mb-8 md:mb-10 group overflow-hidden">
                 <input 
                     type="text" 
                     id="password-result" 
                     readonly 
                     placeholder="Sua senha aparecerá aqui..."
-                    class="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl py-6 px-8 text-2xl md:text-3xl font-mono text-center outline-none focus:border-primary/50 transition-all cursor-default placeholder-slate-600"
+                    class="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl py-5 md:py-6 pl-6 pr-24 md:px-8 text-lg sm:text-xl md:text-3xl font-mono text-center md:text-center outline-none focus:border-primary/50 transition-all cursor-default placeholder-slate-600 truncate"
                     aria-label="Senha gerada"
                     aria-live="polite"
                 >
-                <div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-2">
+                <div class="absolute right-3 top-1/2 -translate-y-1/2 flex gap-1.5 md:gap-2">
                     <button 
                         id="copy-btn" 
-                        class="p-3 bg-slate-800 hover:bg-slate-700 rounded-xl transition-all text-slate-300 hover:text-white group/btn relative"
+                        class="p-2.5 md:p-3 bg-slate-800 hover:bg-slate-700 rounded-xl transition-all text-slate-300 hover:text-white group/btn relative active:scale-95"
                         title="Copiar senha"
                         aria-label="Copiar senha para área de transferência"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                         </svg>
-                        <span class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-xs px-2 py-1 rounded opacity-0 transition-opacity group-active/btn:opacity-100 pointer-events-none">Copiado!</span>
+                        <span class="absolute -top-12 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] md:text-xs px-2 py-1 rounded opacity-0 transition-opacity group-active/btn:opacity-100 pointer-events-none">Copiado!</span>
                     </button>
                     <button 
                         id="visibility-btn" 
-                        class="p-3 bg-slate-800 hover:bg-slate-700 rounded-xl transition-all text-slate-300 hover:text-white"
+                        class="p-2.5 md:p-3 bg-slate-800 hover:bg-slate-700 rounded-xl transition-all text-slate-300 hover:text-white active:scale-95"
                         title="Alternar visibilidade"
                         aria-label="Alternar visibilidade da senha"
                     >
-                        <svg id="eye-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="eye-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path id="eye-base" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
                     </button>
                 </div>
@@ -223,10 +224,10 @@
                 <!-- Generate Button -->
                 <button 
                     id="generate-btn" 
-                    class="w-full gradient-bg hover:opacity-90 py-5 rounded-2xl text-xl font-display font-bold text-white shadow-xl shadow-primary/20 transform transition-all active:scale-95 flex items-center justify-center gap-3"
+                    class="w-full gradient-bg hover:opacity-90 py-4 md:py-5 rounded-2xl text-lg md:text-xl font-display font-bold text-white shadow-xl shadow-primary/20 transform transition-all active:scale-[0.98] flex items-center justify-center gap-3"
                     aria-label="Gerar nova senha"
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-spin-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
                     Gerar Nova Senha
@@ -341,13 +342,37 @@
                 } else {
                     this.elements.result.value = "•".repeat(this.currentPassword.length);
                 }
+                
+                // Adjust font size based on length for mobile
+                if (window.innerWidth < 768) {
+                    const res = this.elements.result;
+                    res.classList.remove('text-xl', 'text-lg', 'text-sm');
+                    if (this.currentPassword.length > 24) {
+                        res.classList.add('text-sm');
+                    } else if (this.currentPassword.length > 16) {
+                        res.classList.add('text-lg');
+                    } else {
+                        res.classList.add('text-xl');
+                    }
+                }
             }
 
             toggleVisibility() {
                 this.isVisible = !this.isVisible;
                 this.updateDisplay();
-                // Update icon (simplified)
-                this.elements.btnVisibility.classList.toggle('text-primary');
+                
+                const eyeIcon = document.getElementById('eye-icon');
+                const eyePath = document.getElementById('eye-path');
+                
+                if (this.isVisible) {
+                    this.elements.btnVisibility.classList.add('text-primary');
+                    // Eye with slash
+                    eyePath.setAttribute('d', 'M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21');
+                } else {
+                    this.elements.btnVisibility.classList.remove('text-primary');
+                    // Eye open
+                    eyePath.setAttribute('d', 'M15 12a3 3 0 11-6 0 3 3 0 016 0z');
+                }
             }
 
             async handleCopy() {
@@ -366,7 +391,8 @@
          * @skills @algorithmic-art
          */
         let particles = [];
-        const numParticles = 80;
+        const isMobile = window.innerWidth < 768;
+        const numParticles = isMobile ? 40 : 80;
 
         function setup() {
             const canvas = createCanvas(windowWidth, windowHeight);
